@@ -35,9 +35,11 @@ This API leverages a pre-trained regression model to predict house prices based 
 - 📦 Git
 
 ### 1. Clone the Repository
-```bash
+
 git clone https://github.com/armtaehee/MLOPS_DeployModel.git
 cd MLOPS_DeployModel
+
+
 
 2. Install Dependencies
 Install the required Python packages:
