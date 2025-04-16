@@ -48,21 +48,21 @@ docker build -t houseprice-app .
 
 docker run -p 9000:9000 houseprice-app
 
-###🧾 Example Request
+### 🧾 Example Request
 
 curl -X POST http://localhost:9000/predict \
      -H "Content-Type: application/json" \
      -d '{"features": [7420, 4, 2, 3, 1, 0, 0, 0, 1, 2, 1, 2]}'
 
      
-###🧾 Example Response
+### 🧾 Example Response
 
 {
   "prediction": 13300000.0
 }
 
 
-###🧠 Model Info
+### 🧠 Model Info
 Dataset: Trained on 545 property listings.
 
 Features:
