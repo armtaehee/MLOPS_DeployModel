@@ -19,7 +19,11 @@ Built with **Flask** and containerized with **Docker**, it's a real-world-ready 
 ---
 
 ## 📂 Project Structure
-MLOPS_DeployModel/ ├── app.py # Flask application ✨ ├── model.pkl # Trained ML model 🧠 ├── requirements.txt # Python dependencies 📦 ├── Dockerfile # Docker configuration 🐳 └── README.md # Project documentation 📜
+MLOPS_DeployModel/ ├── app.py # Flask application ✨ 
+├── model.pkl # Trained ML model 🧠 
+├── requirements.txt # Python dependencies 📦 
+├── Dockerfile # Docker configuration 🐳 
+└── README.md # Project documentation 📜
 ## 🛠️ Setup Instructions
 
 ### ✅ Prerequisites
@@ -27,4 +31,11 @@ MLOPS_DeployModel/ ├── app.py # Flask application ✨ ├── model.pkl 
 - 🐍 Python 3.8+
 - 🐳 Docker (optional, for containerized deployment)
 - 📂 Git
+
+### ⚙️ 1. Clone the Repository
+git clone https://github.com/armtaehee/MLOPS_DeployModel.git
+cd MLOPS_DeployModel
+### ⚙️ 2. Clone the Repository
+pip install -r requirements.txt
+
 
