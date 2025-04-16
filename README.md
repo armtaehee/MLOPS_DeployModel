@@ -19,4 +19,11 @@ Built with **Flask** and containerized with **Docker**, it's a real-world-ready 
 ---
 
 ## 📂 Project Structure
+## 🛠️ Setup Instructions
+
+### ✅ Prerequisites
+
+- 🐍 Python 3.8+
+- 🐳 Docker (optional, for containerized deployment)
+- 📂 Git
 
