@@ -37,7 +37,8 @@ git clone https://github.com/armtaehee/MLOPS_DeployModel.git
 
 cd MLOPS_DeployModel
 
-### ⚙️ 2. Clone the Repository
+### 📦 2. Install Dependencies
+
 pip install -r requirements.txt
 
 ### 🧪 3. Run the API Locally
