@@ -1,23 +1,13 @@
 # 🏠 House Price Prediction API
 
-A simple Flask-based API that predicts house prices using a trained machine learning model.
+A lightweight Flask-based API for predicting house prices using a trained machine learning model.
 
 ---
 
-## 🔧 Setup Instructions
+## 📋 Overview
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/house-price-prediction.git
-cd house-price-prediction
+This API uses a pre-trained regression model to predict house prices based on numerical and categorical features such as area, number of bedrooms, and furnishing status. The API is containerized with Docker for easy deployment.
 
-.
-├── app/
-│   ├── app.py
-│   ├── housemodel.pkl
-│   └── requirements.txt
-├── Dockerfile
-└── README.md
+---
 
-cd app
-pip install -r requirements.txt
+## 📂 Project Structure
