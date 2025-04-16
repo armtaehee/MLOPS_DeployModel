@@ -34,7 +34,9 @@ MLOPS_DeployModel/ ├── app.py # Flask application ✨
 
 ### ⚙️ 1. Clone the Repository
 git clone https://github.com/armtaehee/MLOPS_DeployModel.git
+
 cd MLOPS_DeployModel
+
 ### ⚙️ 2. Clone the Repository
 pip install -r requirements.txt
 
