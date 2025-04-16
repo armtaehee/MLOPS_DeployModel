@@ -1,26 +1,23 @@
-# mldeployment-cpe393
+# 🏠 House Price Prediction API
 
-# model export
-Run train.py. (model.pkl will be saved in app folder)
+A simple Flask-based API that predicts house prices using a trained machine learning model.
 
-# Go to the directory in terminal
-cd "project folder directory"
+---
 
-# Build Docker image
-docker build -t ml-model .
+## 🔧 Setup Instructions
 
-# Run Docker container
-docker run -p 9000:9000 ml-model
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/house-price-prediction.git
+cd house-price-prediction
 
-# Test the API in new terminal
+.
+├── app/
+│   ├── app.py
+│   ├── housemodel.pkl
+│   └── requirements.txt
+├── Dockerfile
+└── README.md
 
-curl -X POST http://localhost:9000/predict \
-     -H "Content-Type: application/json" \
-     -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
-
-expected output
-
-{"prediction": 0}
-
-
-
+cd app
+pip install -r requirements.txt

@@ -14,10 +14,39 @@ def home():
 
 @app.route("/predict", methods=["POST"])
 def predict():
+    
     data = request.get_json()
-    input_features = np.array(data["features"]).reshape(1, -1)
-    prediction = model.predict(input_features)
-    return jsonify({"prediction": int(prediction[0])})
+    # Validate the presence of 'features'
+    if "features" not in data:
+        return jsonify({"error": "'features' key is required in the request"}), 400
+
+    input_features_list = data["features"]
+
+    # Validate input format
+    for idx, feature_set in enumerate(input_features_list):
+        if len(feature_set) != 4:
+            return (
+                jsonify({"error": f"Input {idx + 1} does not contain exactly 4 values."}),
+                400,
+            )
+        if not all(isinstance(val, (float, int)) for val in feature_set):
+            return (
+                jsonify({"error": f"Input {idx + 1} contains non-numeric values."}),
+                400,
+            )
+    input_features = np.array(input_features_list)
+    predictions = model.predict(input_features)
+    confidence_scores = np.max(model.predict_proba(input_features), axis=1)
+
+    return jsonify({
+        "predictions": predictions.tolist(),
+        "confidence": confidence_scores.tolist()
+    })
+
+
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "ok"}), 200
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=9000) #check your port number ( if it is in use, change the port number)
+    app.run(host="0.0.0.0", port=9000)
