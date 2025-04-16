@@ -19,6 +19,7 @@ Built with **Flask** and containerized with **Docker**, it's a real-world-ready 
 ---
 
 ## 📂 Project Structure
+MLOPS_DeployModel/ ├── app.py # Flask application ✨ ├── model.pkl # Trained ML model 🧠 ├── requirements.txt # Python dependencies 📦 ├── Dockerfile # Docker configuration 🐳 └── README.md # Project documentation 📜
 ## 🛠️ Setup Instructions
 
 ### ✅ Prerequisites
