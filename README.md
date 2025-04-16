@@ -40,4 +40,18 @@ cd MLOPS_DeployModel
 ### ⚙️ 2. Clone the Repository
 pip install -r requirements.txt
 
+### 🧪 3. Run the API Locally
+python app.py(The API will run at: http://localhost:9000)
+
+### 🐳 4. Run with Docker (Optional)
+docker build -t houseprice-app .
+
+docker run -p 9000:9000 houseprice-app
+
+###🧾 Example Request
+---
+curl -X POST http://localhost:9000/predict \
+     -H "Content-Type: application/json" \
+     -d '{"features": [7420, 4, 2, 3, 1, 0, 0, 0, 1, 2, 1, 2]}'
+---
 
